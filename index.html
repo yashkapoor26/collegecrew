@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Crew - Home</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <!-- 3D Menu Button -->
+  <div class="menu-button" id="menuButton">
+    <div class="menu-line"></div>
+    <div class="menu-line"></div>
+    <div class="menu-line"></div>
+  </div>
+  <!-- 3D Menu -->
+  <div class="menu-3d" id="menu3d">
+    <div class="menu-item" data-section="home">Home</div>
+    <div class="menu-item" data-section="join">Join the Community</div>
+    <div class="menu-item" data-section="explore">Explore Community</div>
+    <div class="menu-item" data-section="about">About</div>
+    <div class="menu-item" data-section="motto">Our Motto</div>
+    <div class="menu-item" data-section="contact">Contact Us</div>
+    <div class="menu-item" data-section="help">Help</div>
+  </div>
+  <div class="center-content" id="homeSection">
+    <img src="logo.jpg" alt="College Crew Logo" class="main-logo"/>
+    <h1 class="company-name">College Crew</h1>
+    <button id="aboutBtn" class="main-btn">About & Founders</button>
+  </div>
+  <!-- Modals and Sections -->
+  <div id="modal" class="modal"></div>
+  <div id="orgChartSection" class="org-chart-section"></div>
+  <div id="contactSection" class="contact-section"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
