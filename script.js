@@ -37,7 +37,7 @@ function generateGalaxyTexture() {
     ctx.shadowBlur = Math.random() * 8 + 2;
     ctx.fill();
     ctx.shadowBlur = 0;
-  }
+}
   // Add several colorful nebula clouds (demo)
   const nebulaColors = [
     'rgba(123,104,238,0.22)', // purple
@@ -160,7 +160,7 @@ menu3d.querySelectorAll('.menu-item').forEach(item => {
     if (section === 'about') showModal('About', '<div style="text-align:center;font-size:1.5rem;">Under Construction</div>');
     if (section === 'motto') showModal('Our Motto', '<div style="text-align:center;font-size:1.5rem;">Under Construction</div>');
     if (section === 'contact') showContactSection();
-    if (section === 'help') showModal('Help', '<div style="text-align:center;">For help, contact us at <b>collegecrew@gmail.com</b> or call <b>+91 9758648712</b>.</div>');
+    if (section === 'help') showModal('Help', '<div style="text-align:center;">For help, contact us at <b>collegecrew31@gmail.com</b> or call <b>+91 9758648712</b>.</div>');
   };
 });
 
@@ -193,37 +193,16 @@ function showAboutFoundersModal() {
   document.getElementById('aboutFoundersBtn').onclick = function() {
     document.getElementById('aboutFoundersContent').innerHTML = `
       <div style="display:flex;flex-direction:column;align-items:center;">
-        <div style="position:relative;display:flex;flex-direction:column;align-items:center;min-height:160px;">
-          <div style="position:absolute;top:-60px;left:50%;transform:translateX(-50%);z-index:2;">
-            <img src="founder.jpg" style="width:100px;height:100px;border-radius:50%;border:5px solid #fff;box-shadow:0 4px 24px #7b68ee55,0 0 0 8px #000a;object-fit:cover;background:#fff;"/>
-          </div>
-          <div style="margin-top:50px;background:#fff;border-radius:18px;box-shadow:0 8px 32px #7b68ee55;padding:32px 24px;min-width:320px;max-width:90vw;display:flex;flex-direction:column;align-items:center;">
-            <button id="yashKapoorBtn" class="main-btn" style="width:220px;font-size:1.1rem;margin-bottom:18px;display:flex;align-items:center;justify-content:center;gap:10px;">YASH KAPOOR</button>
-            <div id="yashKapoorContent"></div>
-          </div>
+        <div style="background:#fff;border-radius:18px;box-shadow:0 8px 32px #7b68ee55;padding:32px 24px;min-width:320px;max-width:90vw;display:flex;align-items:center;gap:24px;">
+          <div style="background:#fff;border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:20px;box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+            <img src="founder.jpg" style="width:70px;height:70px;border-radius:50%;border:5px solid #fff;box-shadow:0 4px 24px #7b68ee55,0 0 0 8px #000a;object-fit:cover;background:#fff;flex-shrink:0;"/>
+            <button id="yashKapoorBtn" class="main-btn" style="width:220px;font-size:1.1rem;display:flex;align-items:center;justify-content:center;gap:10px;">YASH KAPOOR</button>
+          </div>e
         </div>
       </div>
     `;
     document.getElementById('yashKapoorBtn').onclick = function() {
-      document.getElementById('yashKapoorContent').innerHTML = `
-        <div style="color:#222;font-family:'Georgia',serif;text-align:left;max-width:500px;">
-          <div style="font-size:1.2rem;font-weight:bold;margin-bottom:10px;">SUMMARY</div>
-          <div style="margin-bottom:18px;">Yash Kapoor is a young innovator and founder-minded technologist from NIT Bhopal, blending engineering precision with entrepreneurial instinct. With a strong hold in product design, sponsorship strategy, and AI tools, he's shaping ideas into impactful solutions. Passionate about building what people actually need, Yash stands out for converting vision into prototypes — fast, focused, and fearless.</div>
-          <div style="font-size:1.1rem;font-weight:bold;margin-bottom:8px;">Experiences</div>
-          <ul style="margin-bottom:18px;">
-            <li><b>FiNIT – The Finance Society, NIT Bhopal</b><br>Sponsorship Executive — Apr 2025 – Present<br>Built corporate partnerships and drove sponsor communication strategy. Developed decks, handled cold outreach, and maintained brand relations.</li>
-            <li><b>Growbinar</b><br>Campus Ambassador — May 2025 – Present<br>Promoted product awareness and organized campaign activities across campus. Built student engagement funnels and reported insights.</li>
-            <li><b>Evolve – Tech Society, NIT Bhopal</b><br>Technical Executive — Apr 2025 – Present<br>Contributed to technical event planning, codebase development, and troubleshooting. Participated in AI and logic-building modules.</li>
-            <li><b>E-Cell, NIT Bhopal</b><br>Freshers' Representative — Jan 2025 – Mar 2025<br>Acted as a bridge between new entrants and society leads. Assisted in organizing workshops and funding drives.</li>
-            <li><b>Joveo</b><br>Product & Research Intern — Feb 2025 – July 2025<br>Worked closely with the product and data teams to research user behavior and suggest optimizations for job ad targeting. Developed structured insights and contributed to internal tools. Earned: $200 during the internship for performance-based contributions.</li>
-          </ul>
-          <div style="font-size:1.1rem;font-weight:bold;margin-bottom:8px;">Education</div>
-          <ul>
-            <li>Maulana Azad National Institute of Technology (MANIT), Bhopal<br>B.Tech in Electrical Engineering | Aug 2024 – Sep 2028</li>
-            <li>Darshan Academy<br>Completed Schooling | 2017 – 2024</li>
-          </ul>
-        </div>
-      `;
+      window.location.href = 'yash-kapoor.html';
     };
   };
 }
@@ -247,6 +226,7 @@ function showJoinCommunity() {
       <button class="main-btn" onclick="window.open('https://chat.whatsapp.com/DF9MVU1VpaYFdo5JPqpskV', '_blank')">WhatsApp</button>
       <button class="main-btn" onclick="window.open('https://x.com/', '_blank')">X</button>
       <button class="main-btn" onclick="window.open('https://linkedin.com/', '_blank')">LinkedIn</button>
+      <button class="main-btn" onclick="window.open('https://discord.gg/SsgxAFnW', '_blank')">Discord</button>
     </div>
   `);
 }
@@ -267,7 +247,7 @@ function showOrgChart() {
     <div class="org-chart">
       <div class="org-founder outstanding-founder" style="min-width:360px;max-width:96vw;padding:38px 32px 22px 32px;">
         <img src="founder.jpg" class="org-founder-photo" style="width:120px;height:120px;margin-bottom:18px;box-shadow:0 4px 24px #7b68ee55,0 0 0 8px #000a;"/>
-        <div class="org-founder-title" style="font-size:1.4rem;font-weight:bold;color:#7b68ee;letter-spacing:2px;text-shadow:0 2px 12px #7b68ee77,0 0 2px #fff;margin-bottom:6px;">FOUNDER & CEO</div>
+        <div class="org-founder-title" style="font-size:1.4rem;font-weight:bold;color:#7b68ee;letter-spacing:2px;text-shadow:0 2px 12px #7b68ee77,0 0 2px #fff;margin-bottom:6px;">FOUNDER</div>
         <div class="org-founder-name" style="font-size:2.3rem;font-weight:bold;color:#222;letter-spacing:2px;text-shadow:0 2px 12px #fff,0 0 2px #7b68ee;">Yash Kapoor</div>
       </div>
       <div class="org-chart-connector"></div>
@@ -293,7 +273,7 @@ function showContactSection() {
     </div>
     <div class="contact-info">
       <b>Contact Us</b><br>
-      Email: <a href="mailto:collegecrew@gmail.com" style="color:#7b68ee;">collegecrew@gmail.com</a><br>
+      Email: <a href="mailto:collegecrew31@gmail.com" style="color:#7b68ee;">collegecrew31@gmail.com</a><br>
       Toll Free: <a href="tel:+919758648712" style="color:#7b68ee;">+91 9758648712</a>
     </div>
   `;
