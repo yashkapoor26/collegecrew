@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>College Crew - Home</title>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    #chat { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; }
+    .msg { margin: 10px 0; }
+    /* Reverse zoom-in animation */
+    body.reverse-zoomin {
+      animation: reverseZoomIn 1.7s cubic-bezier(0.4,0,0.2,1);
+    }
+    @keyframes reverseZoomIn {
+      from { transform: scale(1.2); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
 </head>
 <body>
   <canvas id="bg"></canvas>
@@ -35,5 +48,25 @@
   <div id="contactSection" class="contact-section"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    // Trigger reverse zoom-in effect on load and reload
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('reverse-zoomin');
+      setTimeout(() => {
+        document.body.classList.remove('reverse-zoomin');
+      }, 1700); // match animation duration
+    });
+    async function sendMessage() {
+      const input = document.getElementById('userInput').value;
+      document.getElementById('chat').innerHTML += `<div class='msg'><strong>You:</strong> ${input}</div>`;
+      const response = await fetch('/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: input })
+      });
+      const data = await response.json();
+      document.getElementById('chat').innerHTML += `<div class='msg'><strong>Bot:</strong> ${data.answer}</div>`;
+    }
+  </script>
 </body>
 </html>
